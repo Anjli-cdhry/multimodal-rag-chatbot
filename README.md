@@ -47,37 +47,38 @@ This project solves that limitation by building a **multimodal retrieval system*
 ---
 
 ## 🏗 System Architecture
+
+```
 PDF Document
-↓
+      ↓
 Text + Image Extraction (PyMuPDF)
-↓
-CLIP Embeddings
-↓
+      ↓
+Multimodal Embeddings (CLIP)
+      ↓
 FAISS Vector Database
-↓
+      ↓
 Similarity Search
-↓
+      ↓
 Top Relevant Chunks
-↓
+      ↓
 LLaMA (Groq API)
-↓
+      ↓
 Final Answer
-
----
-
+```
 ## 📂 Project Structure
+
+```
 multimodal-rag-chatbot/
 │
-├── app.py # Streamlit user interface
-├── main.py # PDF processing and FAISS index creation
-├── chat.py # Terminal-based chatbot
-├── requirements.txt # Project dependencies
+├── app.py                # Streamlit UI
+├── main.py               # PDF processing + FAISS index creation
+├── chat.py               # Terminal-based chatbot
+├── requirements.txt      # Project dependencies
 ├── multimodal_sample.pdf # Sample PDF document
-├── vector_store.index # FAISS vector index
-├── all_docs.pkl # Stored document chunks
-└── .env # API keys (not included)
-
----
+├── vector_store.index    # FAISS vector index
+├── all_docs.pkl          # Stored document chunks
+└── .env                  # API keys (not included)
+```
 
 ## 🔍 How It Works
 
@@ -120,13 +121,13 @@ Give me the summary of this document
 What does the chart on page 3 represent?
 Explain the diagram in the PDF
 ---
-👩‍💻 Author
+## 👩‍💻 Author
 
-Anjali Choudhary
+**Anjali Choudhary**  
+M.Sc. Student | AI & GenAI Enthusiast  
 
-LinkedIn: www.linkedin.com/in/anjali-choudhary-396904331
-GitHub: https://github.com/Anjli-cdhry
----
+🔗 LinkedIn: [Anjali Choudhary](https://www.linkedin.com/in/anjali-choudhary-396904331)  
+💻 GitHub: [Anjli-cdhry](https://github.com/Anjli-cdhry)
 ⭐ If you find this project useful
 
 Consider giving the repository a star ⭐
