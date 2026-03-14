@@ -98,28 +98,42 @@ Clone the repository:
 ```bash
 git clone https://github.com/Anjli-cdhry/multimodal-rag-chatbot.git
 cd multimodal-rag-chatbot
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
-Create a .env file:
+Create a `.env` file:
 
+```bash
 GROQ_API_KEY=your_groq_api_key
----
-## Run the Application
+```
+## ▶ Run the Application
 
-Run the Streamlit interface:
+### Run the Streamlit Web Interface
+
+```bash
 streamlit run app.py
-Or run the terminal chatbot:
+```
+
+### Run the Terminal Chatbot
+
+```bash
 python chat.py
+```
+
 ---
-📊 Example Queries
+
+## 💬 Example Queries
+
 Try asking questions like:
 
-Give me the summary of this document
-What does the chart on page 3 represent?
-Explain the diagram in the PDF
+- Give me the summary of this document
+- What does the chart on page 3 represent?
+- Explain the diagram in the PDF
 
 ## 👩‍💻 Author
 
