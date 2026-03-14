@@ -8,11 +8,7 @@ The system extracts **text and images from PDFs**, generates **multimodal embedd
 
 ## 🚀 Live Demo
 
-Try the application here:
-
-👉 https://huggingface.co/spaces/Anjaligiriraaj/multimodal-rag-chatbot
-
----
+[Try it on Hugging Face Spaces](https://huggingface.co/spaces/Anjaligiriraj/multimodal-rag-chatbot)
 
 ##  Problem Statement
 
