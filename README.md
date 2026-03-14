@@ -105,7 +105,7 @@ pip install -r requirements.txt
 
 Create a .env file:
 
-GROQ_API_KEY=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
+GROQ_API_KEY=your_groq_api_key
 ---
 ## Run the Application
 
@@ -124,34 +124,11 @@ Explain the diagram in the PDF
 ## 👩‍💻 Author
 
 **Anjali Choudhary**  
-M.Sc. Student | AI & GenAI Enthusiast  
+M.Sc Student | AI & GenAI Enthusiast  
 
-🔗 LinkedIn: [Anjali Choudhary](https://www.linkedin.com/in/anjali-choudhary-396904331)  
-💻 GitHub: [Anjli-cdhry](https://github.com/Anjli-cdhry)
-⭐ If you find this project useful
+🔗 **LinkedIn:** [Anjali Choudhary](https://www.linkedin.com/in/anjali-choudhary-396904331)
 
-Consider giving the repository a star ⭐
+💻 **GitHub:** [Anjli-cdhry](https://github.com/Anjli-cdhry)
 
----
+⭐ If you find this project useful, consider giving the repository a star.
 
-# Why this README is strong
-
-It shows:
-
-- **Problem statement**
-- **Architecture**
-- **Tech stack**
-- **How it works**
-- **Deployment**
-- **Installation**
-- **Example queries**
-
-This is exactly what **recruiters and interviewers expect**.
-
----
-
-# One small improvement you should add
-
-Add **one architecture diagram** later — it makes the repo look **10x more professional**.
-
-If you want, I can also show you **3 small changes that will make this project look like a senior-level GenAI project on GitHub.**
