@@ -120,7 +120,7 @@ Try asking questions like:
 Give me the summary of this document
 What does the chart on page 3 represent?
 Explain the diagram in the PDF
----
+
 ## 👩‍💻 Author
 
 **Anjali Choudhary**  
