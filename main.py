@@ -40,7 +40,7 @@ def embed_text(text):
         )
         with torch.no_grad():
             outputs = clip_model.text_model(**{k: v for k, v in inputs.items() if k != 'pixel_values'})
-            text_features = outputs.pooler_output  # direct tensor milega
+            text_features = outputs.pooler_output  
         
         text_features = text_features / torch.norm(text_features, dim=-1, keepdim=True)
         embeddings.append(text_features.cpu().numpy()[0])
@@ -57,7 +57,7 @@ def embed_image(image):
     
     with torch.no_grad():
         image_features = clip_model.vision_model(pixel_values=inputs["pixel_values"])
-        image_features = image_features.pooler_output  # direct tensor
+        image_features = image_features.pooler_output 
     
     # Normalize
     image_features = image_features / torch.norm(image_features, dim=-1, keepdim=True)
@@ -143,7 +143,7 @@ import faiss
 
 print("Building FAISS index...")
 
-embedding_dim = all_embeddings[0].shape[0]  # 512 for CLIP
+embedding_dim = all_embeddings[0].shape[0]  
 
 # Fix inhomogeneous embeddings
 fixed_embeddings = []
@@ -156,21 +156,21 @@ for i, emb in enumerate(all_embeddings):
 all_embeddings = fixed_embeddings
 all_docs = all_docs[:len(fixed_embeddings)]
 
-# Fix: sabko same size karo (512)
+
 target_dim = 512
 fixed = []
 for emb in all_embeddings:
     emb = emb.flatten()
     if emb.shape[0] > target_dim:
-        emb = emb[:target_dim]  # trim karo
+        emb = emb[:target_dim] 
     elif emb.shape[0] < target_dim:
-        emb = np.pad(emb, (0, target_dim - emb.shape[0]))  # pad karo
+        emb = np.pad(emb, (0, target_dim - emb.shape[0])) 
     fixed.append(emb)
 
 embeddings_matrix = np.array(fixed).astype("float32")
 embedding_dim = target_dim
 
-index = faiss.IndexFlatIP(embedding_dim)  # Inner Product = cosine similarity
+index = faiss.IndexFlatIP(embedding_dim)  
 index.add(embeddings_matrix)
 
 print(f"FAISS index built! Total vectors: {index.ntotal}")
